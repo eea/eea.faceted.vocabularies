@@ -1,0 +1,80 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="eea.faceted.tool">
+
+  <utility
+    component=".catalog.ObjectProvidesVocabularyFactory"
+    name="eea.faceted.vocabularies.ObjectProvides"
+    />
+
+  <utility
+    component=".catalog.CatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.CatalogIndexes"
+    />
+
+  <utility
+    component=".catalog.AlphabeticCatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.AlphabeticCatalogIndexes"
+    />
+
+  <utility
+    component=".catalog.DateRangeCatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.DateRangeCatalogIndexes"
+    />
+
+  <utility
+    component=".catalog.TextCatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.TextCatalogIndexes"
+    />
+
+  <utility
+    component=".catalog.PathCatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.PathCatalogIndexes"
+    />
+
+  <utility
+    component=".portal.PortalVocabulariesVocabularyFactory"
+    name="eea.faceted.vocabularies.PortalVocabularies"
+    />
+
+  <utility
+    component=".portal.PortalLanguagesVocabularyFactory"
+    name="eea.faceted.vocabularies.PortalLanguages"
+    />
+
+  <utility
+    component=".types.PortalTypesVocabularyFactory"
+    name="eea.faceted.vocabularies.PortalTypes"
+    />
+
+  <utility
+    component=".faceted.FacetedPortalTypesVocabularyFactory"
+    name="eea.faceted.vocabularies.FacetedPortalTypes"
+    />
+
+  <utility
+    component=".faceted.FacetedOnlyPortalTypesVocabularyFactory"
+    name="eea.faceted.vocabularies.FacetedOnlyPortalTypes"
+    />
+
+  <utility
+    component=".position.VocabularyFactory"
+    name="eea.faceted.vocabularies.WidgetPositions"
+    />
+
+  <utility
+    component=".section.VocabularyFactory"
+    name="eea.faceted.vocabularies.WidgetSections"
+    />
+
+  <utility
+    component=".simple.UseCatalogVocabularyFactory"
+    name="eea.faceted.vocabularies.UseCatalog"
+    />
+
+  <utility
+    component=".simple.JsTreeThemesFactory"
+    name="eea.faceted.vocabularies.JsTreeThemes"
+    />
+
+</configure>

@@ -1,0 +1,53 @@
+EEA faceted vocabularies
+========================
+Vocabularies defined to be used within eea faceted packages
+
+    >>> from zope.app.schema.vocabulary import IVocabularyFactory
+    >>> from zope.component import getUtility
+
+eea.faceted.vocabularies.ObjectProvides
+---------------------------------------
+Vocabulary from catalog index object_provides uniqueValues.
+
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.ObjectProvides')
+    >>> voc
+    <eea.faceted.vocabularies.catalog.ObjectProvidesVocabulary object at ...>
+
+eea.faceted.vocabularies.PortalTypes
+------------------------------------
+Same as plone.app.vocabularies.PortalTypes
+
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.PortalTypes')
+    >>> voc
+    <eea.faceted.vocabularies.types.PortalTypesVocabulary object at ...>
+
+eea.faceted.vocabularies.FacetedPortalTypes
+-------------------------------------------
+This vocabulary adds to plone.app.vocabularies.UserFriendlyTypes custom portal
+types mapping added within portal_faceted tool.
+
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.FacetedPortalTypes')
+    >>> voc
+    <eea.faceted.vocabularies.faceted.FacetedPortalTypesVocabulary object at ...>
+
+eea.faceted.vocabularies.WidgetPositions
+----------------------------------------
+Faceted widgets possible positions
+
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.WidgetPositions')
+    >>> voc
+    <eea.faceted.vocabularies.position.WidgetPositions object at ...>
+
+    >>> [term.value for term in voc()]
+    ['top', 'left', 'center', 'right', 'bottomcenter', 'bottom']
+
+eea.faceted.vocabularies.WidgetSections
+---------------------------------------
+Faceted widgets possible sections
+
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.WidgetSections')
+    >>> voc
+    <eea.faceted.vocabularies.section.WidgetSections object at ...>
+
+    >>> [term.value for term in voc()]
+    ['default', 'advanced']
