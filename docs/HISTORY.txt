@@ -1,33 +1,40 @@
 Changelog
 =========
 
+
 4.0-dev - (unreleased)
 ----------------------
 
-* Plone 4.1 compatibility.
-  [thomasdesvenain]
+ * Cleanup: Fixed all pylint, pyflakes violations [voineali #4255]
+ * Feature: Plone 4.1 compatibility [thomasdesvenain]
+
 
 1.4 - (2010-11-15)
 ------------------
 
-* Release on pypi [voineali]
+ * Release on pypi [voineali]
+
 
 1.3 (2010-03-16)
 ----------------
 
-* #3100 Fixed: UnicodeDecodeError: 'ascii' codec can't decode byte [voineali]
+ * #3100 Fixed: UnicodeDecodeError: 'ascii' codec can't decode byte [voineali]
+
 
 1.2 (2010-01-18)
 ----------------
 
-* #2625 Add vocabularies for Path indexes in order to be used with
-  faceted navigation path widget [voineali]
+ * #2625 Add vocabularies for Path indexes in order to be used with
+   faceted navigation path widget [voineali]
+
 
 1.1 (2009-11-09)
 ----------------
 
-* Remove LinguaPlone and ATVocabularyManager dependencies.
+ * Remove LinguaPlone and ATVocabularyManager dependencies.
+
 
 1.0 (2009-10-29)
 ----------------
-* Initial release
+ 
+ * Initial release

@@ -1,14 +1,9 @@
 """ Portal tools specific vocabularies
 """
 import operator
-from utils import compare
+from eea.faceted.vocabularies.utils import compare
 from zope.component import getUtilitiesFor
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
@@ -33,7 +28,7 @@ class PortalVocabulariesVocabulary(object):
                         for term in vocabularies])
 
         factories = getUtilitiesFor(IVocabularyFactory)
-        res.extend([(key, key) for key, factory in factories])
+        res.extend([(factory[0], factory[0]) for factory in factories])
 
         res.sort(key=operator.itemgetter(1), cmp=compare)
         res.insert(0, ('', ''))

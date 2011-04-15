@@ -1,13 +1,8 @@
 """ Catalog specific vocabularies
 """
 import operator
-from utils import compare
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
@@ -83,14 +78,14 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         """ See IVocabularyFactory interface
         """
         ctool = getToolByName(context, 'portal_catalog')
-        indexes = ctool.getIndexObjects()
         schema = ctool.schema()
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
             if index_id not in schema:
                 continue
-            if index.meta_type not in ('FiledIndex', 'TextIndex', 'ZCTextIndex'):
+            if index.meta_type not in ('FiledIndex',
+                                       'TextIndex', 'ZCTextIndex'):
                 continue
             res.append(index_id)
         labels = self._labels(context)
@@ -114,7 +109,6 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         """ See IVocabularyFactory interface
         """
         ctool = getToolByName(context, 'portal_catalog')
-        indexes = ctool.getIndexObjects()
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
@@ -141,7 +135,6 @@ class TextCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         """ See IVocabularyFactory interface
         """
         ctool = getToolByName(context, 'portal_catalog')
-        indexes = ctool.getIndexObjects()
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
@@ -166,7 +159,6 @@ class PathCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         """ See IVocabularyFactory interface
         """
         ctool = getToolByName(context, 'portal_catalog')
-        indexes = ctool.getIndexObjects()
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()

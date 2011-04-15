@@ -1,11 +1,8 @@
+""" Types vocabularies
+"""
 import operator
-from utils import compare
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
