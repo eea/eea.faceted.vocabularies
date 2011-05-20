@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-05-20 10:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../../vocabularies/simple.py:41
+msgid "Apple"
+msgstr ""
+
+#: ../../vocabularies/section.py:18
+msgid "Basic search"
+msgstr "Recherche simple"
+
+#: ../../vocabularies/position.py:23
+msgid "Bottom"
+msgstr "Bas"
+
+#: ../../vocabularies/position.py:22
+msgid "Center bottom"
+msgstr "Milieu bas"
+
+#: ../../vocabularies/position.py:20
+msgid "Center top"
+msgstr "Milieu haut"
+
+#: ../../vocabularies/simple.py:40
+msgid "Classic"
+msgstr "Classique"
+
+#: ../../vocabularies/simple.py:39
+msgid "Default"
+msgstr "Défaut"
+
+#: ../../vocabularies/section.py:19
+msgid "Extended search"
+msgstr "Recherche avancée"
+
+#: ../../vocabularies/simple.py:42
+msgid "Green"
+msgstr "Vert"
+
+#: ../../vocabularies/position.py:19
+msgid "Left"
+msgstr "Gauche"
+
+#: ../../vocabularies/simple.py:22
+msgid "No"
+msgstr "Non"
+
+#: ../../vocabularies/position.py:21
+msgid "Right"
+msgstr "Droite"
+
+#: ../../vocabularies/position.py:18
+msgid "Top"
+msgstr "Haut"
+
+#: ../../vocabularies/simple.py:23
+msgid "Yes"
+msgstr "Oui"
+
