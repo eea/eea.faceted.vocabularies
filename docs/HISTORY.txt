@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-4.0-dev (unreleased)
---------------------
+4.0 (2011-06-29)
+----------------
 
 * Internationalization: internationalized vocabularies + french translations.
   [thomasdesvenain]

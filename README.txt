@@ -51,10 +51,12 @@ General Public License as published by the Free Software Foundation;
 either version 2 of the License, or (at your option) any later
 version.
 
-Contributor(s): Alin Voinea (Eau de Web),
-                Antonio De Marinis (European Environment Agency),
-                Alec Ghica (Eau de Web),
-                Sasha Vincic (Valentine Web Systems)
+Contributor(s):
+ - Alin Voinea (Eau de Web),
+ - Antonio De Marinis (European Environment Agency),
+ - Alec Ghica (Eau de Web),
+ - Sasha Vincic (Valentine Web Systems)
+ - Thomas Desvenain (Ecreall, Lille, France)
 
 More details under docs/License.txt
 
