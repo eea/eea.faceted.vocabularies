@@ -2,7 +2,7 @@ EEA faceted vocabularies
 ========================
 Vocabularies defined to be used within eea faceted packages
 
-    >>> from zope.app.schema.vocabulary import IVocabularyFactory
+    >>> from zope.schema.interfaces import IVocabularyFactory
     >>> from zope.component import getUtility
 
 eea.faceted.vocabularies.ObjectProvides
