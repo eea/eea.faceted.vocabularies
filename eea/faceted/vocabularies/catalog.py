@@ -84,7 +84,7 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
             index_id = index.getId()
             if index_id not in schema:
                 continue
-            if index.meta_type not in ('FiledIndex',
+            if index.meta_type not in ('FieldIndex',
                                        'TextIndex', 'ZCTextIndex'):
                 continue
             res.append(index_id)
