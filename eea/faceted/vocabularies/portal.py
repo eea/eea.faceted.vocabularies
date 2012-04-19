@@ -28,7 +28,7 @@ class PortalVocabulariesVocabulary(object):
                         for term in vocabularies])
 
         factories = getUtilitiesFor(IVocabularyFactory)
-        res.extend([(factory[0], factory[0]) for factory in factories])
+        res.extend([(factory[0], factory[0]) for factory in factories if factory[0] not in [elem[0] for elem in res]])
 
         res.sort(key=operator.itemgetter(1), cmp=compare)
         res.insert(0, ('', ''))
