@@ -82,7 +82,8 @@ class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
-            if index.meta_type not in ('FieldIndex',): continue
+            if index.meta_type not in ('FieldIndex',):
+                continue
             res.append(index_id)
         labels = self._labels(context)
         res = [(term, labels.get(term, '') or term) for term in res]
