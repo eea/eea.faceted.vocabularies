@@ -4,6 +4,7 @@ Changelog
 
 4.2-dev (unreleased)
 --------------------
+* Added range vocabulary [kiorky]
 * Added Italian translation
   [giacomos]
 

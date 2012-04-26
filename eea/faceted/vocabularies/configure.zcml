@@ -10,6 +10,10 @@
     component=".catalog.ObjectProvidesVocabularyFactory"
     name="eea.faceted.vocabularies.ObjectProvides"
     />
+  <utility
+    component=".catalog.RangeCatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.RangeCatalogIndexes"
+    />  
 
   <utility
     component=".catalog.CatalogIndexesVocabularyFactory"
