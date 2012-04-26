@@ -66,6 +66,33 @@ class CatalogIndexesVocabulary(object):
 
 CatalogIndexesVocabularyFactory = CatalogIndexesVocabulary()
 
+
+#
+# Rangeable catalog indexes
+#
+class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
+    """ Filter catalog indexes for alphabetic widget
+    """
+    implements(IVocabularyFactory)
+
+    def __call__(self, context):
+        """ See IVocabularyFactory interface
+        """
+        ctool = getToolByName(context, 'portal_catalog')
+        res = []
+        for index in ctool.getIndexObjects():
+            index_id = index.getId()
+            if index.meta_type not in ('FieldIndex',): continue
+            res.append(index_id)
+        labels = self._labels(context)
+        res = [(term, labels.get(term, '') or term) for term in res]
+        res.sort(key=operator.itemgetter(1), cmp=compare)
+        res.insert(0, ('', ''))
+        items = [SimpleTerm(key, key, value) for key, value in res]
+        return SimpleVocabulary(items)
+
+RangeCatalogIndexesVocabularyFactory = RangeCatalogIndexesVocabulary()
+
 #
 # Alphabetic catalog indexes
 #
