@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.faceted.vocabularies\n"
-"POT-Creation-Date: 2011-05-20 10:37+0000\n"
+"POT-Creation-Date: 2012-07-26 12:47+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
