@@ -16,57 +16,57 @@ msgstr ""
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
-msgstr ""
+msgstr "- Elma. - Elma."
 
 #: ../../vocabularies/section.py:18
 msgid "Basic search"
-msgstr ""
+msgstr "Temel arama"
 
 #: ../../vocabularies/position.py:23
 msgid "Bottom"
-msgstr ""
+msgstr "Alt"
 
 #: ../../vocabularies/position.py:22
 msgid "Center bottom"
-msgstr ""
+msgstr "Merkezi alt"
 
 #: ../../vocabularies/position.py:20
 msgid "Center top"
-msgstr ""
+msgstr "Merkezi üst"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
-msgstr ""
+msgstr "Klasik"
 
 #: ../../vocabularies/simple.py:39
 msgid "Default"
-msgstr ""
+msgstr "Varsayılan"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
-msgstr ""
+msgstr "Genişletilmiş arama"
 
 #: ../../vocabularies/simple.py:42
 msgid "Green"
-msgstr ""
+msgstr "Yeşil"
 
 #: ../../vocabularies/position.py:19
 msgid "Left"
-msgstr ""
+msgstr "Sol"
 
 #: ../../vocabularies/simple.py:22
 msgid "No"
-msgstr ""
+msgstr "Hayir"
 
 #: ../../vocabularies/position.py:21
 msgid "Right"
-msgstr ""
+msgstr "Sağ"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
-msgstr ""
+msgstr "Üst"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 

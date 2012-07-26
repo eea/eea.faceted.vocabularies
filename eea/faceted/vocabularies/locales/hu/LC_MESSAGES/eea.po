@@ -16,57 +16,57 @@ msgstr ""
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
-msgstr ""
+msgstr "Alma"
 
 #: ../../vocabularies/section.py:18
 msgid "Basic search"
-msgstr ""
+msgstr "Egyszerű keresés"
 
 #: ../../vocabularies/position.py:23
 msgid "Bottom"
-msgstr ""
+msgstr "Alsó"
 
 #: ../../vocabularies/position.py:22
 msgid "Center bottom"
-msgstr ""
+msgstr "Center alsó"
 
 #: ../../vocabularies/position.py:20
 msgid "Center top"
-msgstr ""
+msgstr "Center tetején"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
-msgstr ""
+msgstr "Klasszikus példák"
 
 #: ../../vocabularies/simple.py:39
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezett"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
-msgstr ""
+msgstr "Részletes kereső"
 
 #: ../../vocabularies/simple.py:42
 msgid "Green"
-msgstr ""
+msgstr "Zöld"
 
 #: ../../vocabularies/position.py:19
 msgid "Left"
-msgstr ""
+msgstr "Bal"
 
 #: ../../vocabularies/simple.py:22
 msgid "No"
-msgstr ""
+msgstr "Nem"
 
 #: ../../vocabularies/position.py:21
 msgid "Right"
-msgstr ""
+msgstr "Jobb"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
-msgstr ""
+msgstr "Fent"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
-msgstr ""
+msgstr "Igen - Részletezze, és állítását támassza alá bizonyítékokkal, pl. születés bizonyítvány / házassági okirat."
 

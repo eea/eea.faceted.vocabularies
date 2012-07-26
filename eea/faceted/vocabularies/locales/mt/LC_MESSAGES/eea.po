@@ -16,57 +16,57 @@ msgstr ""
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
-msgstr ""
+msgstr "Apple"
 
 #: ../../vocabularies/section.py:18
 msgid "Basic search"
-msgstr ""
+msgstr "Bażiku tfittxija"
 
 #: ../../vocabularies/position.py:23
 msgid "Bottom"
-msgstr ""
+msgstr "Bottom"
 
 #: ../../vocabularies/position.py:22
 msgid "Center bottom"
-msgstr ""
+msgstr "Qiegħ Center"
 
 #: ../../vocabularies/position.py:20
 msgid "Center top"
-msgstr ""
+msgstr "Quċċata Center"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
-msgstr ""
+msgstr "Classic"
 
 #: ../../vocabularies/simple.py:39
 msgid "Default"
-msgstr ""
+msgstr "Default"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
-msgstr ""
+msgstr "Estiża tfittxija"
 
 #: ../../vocabularies/simple.py:42
 msgid "Green"
-msgstr ""
+msgstr "Paper"
 
 #: ../../vocabularies/position.py:19
 msgid "Left"
-msgstr ""
+msgstr "Xellug"
 
 #: ../../vocabularies/simple.py:22
 msgid "No"
-msgstr ""
+msgstr "Le"
 
 #: ../../vocabularies/position.py:21
 msgid "Right"
-msgstr ""
+msgstr "Dritt"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
-msgstr ""
+msgstr "Top"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
-msgstr ""
+msgstr "Iva"
 

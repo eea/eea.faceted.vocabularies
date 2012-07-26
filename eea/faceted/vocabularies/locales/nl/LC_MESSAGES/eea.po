@@ -16,57 +16,57 @@ msgstr ""
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
-msgstr ""
+msgstr "Appel"
 
 #: ../../vocabularies/section.py:18
 msgid "Basic search"
-msgstr ""
+msgstr "Normaal zoeken"
 
 #: ../../vocabularies/position.py:23
 msgid "Bottom"
-msgstr ""
+msgstr "Onder"
 
 #: ../../vocabularies/position.py:22
 msgid "Center bottom"
-msgstr ""
+msgstr "Midden onder"
 
 #: ../../vocabularies/position.py:20
 msgid "Center top"
-msgstr ""
+msgstr "Center top"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
-msgstr ""
+msgstr "Klassiek"
 
 #: ../../vocabularies/simple.py:39
 msgid "Default"
-msgstr ""
+msgstr "Standaard"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
-msgstr ""
+msgstr "Uitgebreid zoeken"
 
 #: ../../vocabularies/simple.py:42
 msgid "Green"
-msgstr ""
+msgstr "Groen"
 
 #: ../../vocabularies/position.py:19
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: ../../vocabularies/simple.py:22
 msgid "No"
-msgstr ""
+msgstr "Nee"
 
 #: ../../vocabularies/position.py:21
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
-msgstr ""
+msgstr "Boven"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
