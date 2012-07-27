@@ -3,7 +3,9 @@ Changelog
 
 4.3-dev (unreleased)
 --------------------
-
+* Feature: Added .po for: bg, cs, da, el, es, et, fi, hu, is, kl, 
+  lt, lv, mt, nl, no, pl, pt, ro, ru, sk, sl, sv, tr
+  [prospchr #5394]
 
 4.2 (2012-04-26)
 ----------------

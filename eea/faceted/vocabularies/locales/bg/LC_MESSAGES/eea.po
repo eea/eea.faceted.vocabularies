@@ -16,57 +16,57 @@ msgstr ""
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
-msgstr ""
+msgstr "Ябълка"
 
 #: ../../vocabularies/section.py:18
 msgid "Basic search"
-msgstr ""
+msgstr "Основно търсене"
 
 #: ../../vocabularies/position.py:23
 msgid "Bottom"
-msgstr ""
+msgstr "Дъно"
 
 #: ../../vocabularies/position.py:22
 msgid "Center bottom"
-msgstr ""
+msgstr "Център дъното"
 
 #: ../../vocabularies/position.py:20
 msgid "Center top"
-msgstr ""
+msgstr "Център отгоре"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
-msgstr ""
+msgstr "Класически"
 
 #: ../../vocabularies/simple.py:39
 msgid "Default"
-msgstr ""
+msgstr "Стандартно"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
-msgstr ""
+msgstr "Разширено търсене"
 
 #: ../../vocabularies/simple.py:42
 msgid "Green"
-msgstr ""
+msgstr "Зелен"
 
 #: ../../vocabularies/position.py:19
 msgid "Left"
-msgstr ""
+msgstr "Ляво"
 
 #: ../../vocabularies/simple.py:22
 msgid "No"
-msgstr ""
+msgstr "Ном."
 
 #: ../../vocabularies/position.py:21
 msgid "Right"
-msgstr ""
+msgstr "Вдясно"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
-msgstr ""
+msgstr "Водещи"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
-msgstr ""
+msgstr "да"
 
