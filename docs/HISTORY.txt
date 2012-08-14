@@ -3,6 +3,8 @@ Changelog
 
 4.3-dev (unreleased)
 --------------------
+* Feature: Added buildouts folder which will contain various samples of configurations
+  [ghicaale #5418]
 * Feature: Added .po for: bg, cs, da, el, es, et, fi, hu, is, kl, 
   lt, lv, mt, nl, no, pl, pt, ro, ru, sk, sl, sv, tr
   [prospchr #5394]
