@@ -60,7 +60,7 @@ msgstr "Ei"
 
 #: ../../vocabularies/position.py:21
 msgid "Right"
-msgstr ""Õigus!"
+msgstr "Õigus!"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
