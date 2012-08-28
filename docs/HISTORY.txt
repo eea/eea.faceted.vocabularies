@@ -1,8 +1,11 @@
 Changelog
 =========
 
-4.3-dev (unreleased)
---------------------
+4.4-dev - (unreleased)
+----------------------
+
+4.3 - (2012-08-28)
+------------------
 * Feature: Added buildouts folder which will contain various samples of configurations
   [ghicaale #5418]
 * Feature: Added .po for: bg, cs, da, el, es, et, fi, hu, is, kl, 
@@ -15,56 +18,41 @@ Changelog
 * Added Italian translation
   [giacomos]
 
-
 4.1 (2011-11-05)
 ----------------
-
 * Fixed typo for FieldIndex
   [esartor]
 
-
 4.0 (2011-06-29)
 ----------------
-
 * Internationalization: internationalized vocabularies + french translations.
   [thomasdesvenain]
-
 * Cleanup: Fixed all pylint, pyflakes violations.
   [voineali #4255]
-
 * Feature: Plone 4.1 compatibility.
   [thomasdesvenain]
 
-
 1.4 (2010-11-15)
 ----------------
-
 * Release on pypi.
   [voineali]
 
-
 1.3 (2010-03-16)
 ----------------
-
 * #3100 Fixed: UnicodeDecodeError: 'ascii' codec can't decode byte.
   [voineali]
 
-
 1.2 (2010-01-18)
 ----------------
-
 * #2625 Add vocabularies for Path indexes in order to be used with
   faceted navigation path widget.
   [voineali]
 
-
 1.1 (2009-11-09)
 ----------------
-
 * Remove LinguaPlone and ATVocabularyManager dependencies.
-
 
 1.0 (2009-10-29)
 ----------------
-
 * Initial release
+
