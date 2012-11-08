@@ -1,6 +1,10 @@
 ========================
 EEA Faceted Vocabularies
 ========================
+.. image:: http://ci.eionet.europa.eu/job/eea.faceted.vocabularies-www/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea.faceted.vocabularies-www/lastBuild
+.. image:: http://ci.eionet.europa.eu/job/eea.faceted.vocabularies-plone4/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea.faceted.vocabularies-plone4/lastBuild
 
 Overview
 ========
