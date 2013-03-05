@@ -6,6 +6,8 @@ Changelog
 
 4.3 - (2012-08-28)
 ------------------
+* Feature: added information for contributors
+  [ciobabog refs #13892]
 * Feature: Added buildouts folder which will contain various samples of configurations
   [ghicaale #5418]
 * Feature: Added .po for: bg, cs, da, el, es, et, fi, hu, is, kl, 
