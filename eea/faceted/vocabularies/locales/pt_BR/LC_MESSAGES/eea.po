@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"PO-Revision-Date: 2013-05-12 19:37-0300\n"
+"Last-Translator: Gustavo Lepri <gustavolepri@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: pt-br\n"
+"Language-Name: Brazilian Portuguese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../../vocabularies/simple.py:41
+msgid "Apple"
+msgstr "Maçã"
+
+#: ../../vocabularies/section.py:18
+msgid "Basic search"
+msgstr "Pesquisa Básica"
+
+#: ../../vocabularies/position.py:23
+msgid "Bottom"
+msgstr "Inferior"
+
+#: ../../vocabularies/position.py:22
+msgid "Center bottom"
+msgstr "Centro da parte inferior"
+
+#: ../../vocabularies/position.py:20
+msgid "Center top"
+msgstr "Centro da parte superior"
+
+#: ../../vocabularies/simple.py:40
+msgid "Classic"
+msgstr "Clássico"
+
+#: ../../vocabularies/simple.py:39
+msgid "Default"
+msgstr "Padrão"
+
+#: ../../vocabularies/section.py:19
+msgid "Extended search"
+msgstr "Busca avançada"
+
+#: ../../vocabularies/simple.py:42
+msgid "Green"
+msgstr "Verde   "
+
+#: ../../vocabularies/position.py:19
+msgid "Left"
+msgstr "Eesquerda"
+
+#: ../../vocabularies/simple.py:22
+msgid "No"
+msgstr "Não"
+
+#: ../../vocabularies/position.py:21
+msgid "Right"
+msgstr "Direito"
+
+#: ../../vocabularies/position.py:18
+msgid "Top"
+msgstr "Início"
+
+#: ../../vocabularies/simple.py:23
+msgid "Yes"
+msgstr "Sim"
