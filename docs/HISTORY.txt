@@ -3,6 +3,8 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+* Updated Spanish translation
+  [macagua]
 
 4.3 - (2012-08-28)
 ------------------

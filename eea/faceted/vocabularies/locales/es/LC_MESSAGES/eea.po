@@ -1,18 +1,25 @@
+# translation of eea.po to Spanish
+# Christian-Xavier Prosperini <cx.prosperini@gmail.com>, 2012.
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2013.
+# Gettext Message File for eea.facetednavigation
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: eea.faceted.vocabularies\n"
 "POT-Creation-Date: 2012-07-26 12:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-06-04 15:18-0430\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"Language-Code: es\n"
+"Language-Name: Español\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: eea\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
@@ -36,11 +43,11 @@ msgstr "Centro de la parte superior"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
-msgstr "Clasico"
+msgstr "Clásico"
 
 #: ../../vocabularies/simple.py:39
 msgid "Default"
-msgstr "Por Omisión"
+msgstr "Por defecto"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
@@ -64,9 +71,8 @@ msgstr "Derecho"
 
 #: ../../vocabularies/position.py:18
 msgid "Top"
-msgstr "top"
+msgstr "Superior"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
 msgstr "Si"
-
