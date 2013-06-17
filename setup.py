@@ -7,6 +7,10 @@ NAME = 'eea.faceted.vocabularies'
 PATH = NAME.split('.') + ['version.txt']
 VERSION = open(os.path.join(*PATH)).read().strip()
 
+tests_require = [
+    'zope.app.component',
+    ]
+
 setup(name=NAME,
       version=VERSION,
       description="EEA Faceted Vocabularies",
@@ -28,7 +32,10 @@ setup(name=NAME,
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+
       ],
+      tests_require=tests_require,
+      extras_require=dict(test=tests_require),
       entry_points="""
       # -*- Entry points: -*-
       """,
