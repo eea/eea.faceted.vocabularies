@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.5-dev - (unreleased)
+----------------------
+
 4.4 - (2013-06-17)
 ------------------
 * Updated Spanish translation
