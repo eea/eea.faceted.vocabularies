@@ -3,7 +3,7 @@
 import doctest
 import unittest
 
-import zope.app.component
+import zope.component
 import eea.faceted.vocabularies
 
 from zope.component.testing import setUp, tearDown
@@ -14,7 +14,7 @@ def configurationSetUp(self):
     """ Setup
     """
     setUp()
-    XMLConfig('meta.zcml', zope.app.component)()
+    XMLConfig('meta.zcml', zope.component)()
     XMLConfig('configure.zcml', eea.faceted.vocabularies)()
 
 def test_suite():

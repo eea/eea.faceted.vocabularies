@@ -3,6 +3,9 @@ Changelog
 
 4.5-dev - (unreleased)
 ----------------------
+* Change: updated zope imports with the versions that require minimum Plone 4.1
+  for eea.faceted.vocabularies
+  [ichimdav refs #15651]
 
 4.4 - (2013-06-17)
 ------------------

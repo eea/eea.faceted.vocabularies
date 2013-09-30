@@ -8,7 +8,7 @@ PATH = NAME.split('.') + ['version.txt']
 VERSION = open(os.path.join(*PATH)).read().strip()
 
 tests_require = [
-    'zope.app.component',
+    'zope.component',
     ]
 
 setup(name=NAME,
