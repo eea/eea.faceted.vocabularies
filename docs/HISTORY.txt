@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.5-dev - (unreleased)
-----------------------
+4.5 - (2013-10-04)
+------------------
 * Change: updated zope imports with the versions that require minimum Plone 4.1
   for eea.faceted.vocabularies
   [ichimdav refs #15651]
@@ -11,7 +11,6 @@ Changelog
 ------------------
 * Updated Spanish translation
   [macagua]
-
 * Play nice with collective.solr
   [tom_gross]
 
