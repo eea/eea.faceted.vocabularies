@@ -4,6 +4,9 @@ Changelog
 4.6-dev - (unreleased)
 ----------------------
 
+* Added simple field indexes vocabulary for boolean widget.
+  [thomasdesvenain]
+
 4.5 - (2013-10-04)
 ------------------
 * Change: updated zope imports with the versions that require minimum Plone 4.1

@@ -50,13 +50,10 @@ class CatalogIndexesVocabulary(object):
         for index in indexes:
             ob = atool.getIndex(index)
             res[index] = ob.friendlyName
+
         return res
 
-    def __call__(self, context):
-        """ See IVocabularyFactory interface
-        """
-        ctool = getToolByName(context, 'portal_catalog')
-        indexes = ctool.Indexes.keys()
+    def _create_vocabulary(self, context, indexes):
         labels = self._labels(context)
         res = [(term, labels.get(term, '') or term) for term in indexes]
         res.sort(key=operator.itemgetter(1), cmp=compare)
@@ -64,8 +61,14 @@ class CatalogIndexesVocabulary(object):
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
 
-CatalogIndexesVocabularyFactory = CatalogIndexesVocabulary()
+    def __call__(self, context):
+        """ See IVocabularyFactory interface
+        """
+        ctool = getToolByName(context, 'portal_catalog')
+        indexes = ctool.Indexes.keys()
+        return self._create_vocabulary(context, indexes)
 
+CatalogIndexesVocabularyFactory = CatalogIndexesVocabulary()
 
 #
 # Rangeable catalog indexes
@@ -82,15 +85,10 @@ class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
-            if index.meta_type not in ('FieldIndex',):
-                continue
-            res.append(index_id)
-        labels = self._labels(context)
-        res = [(term, labels.get(term, '') or term) for term in res]
-        res.sort(key=operator.itemgetter(1), cmp=compare)
-        res.insert(0, ('', ''))
-        items = [SimpleTerm(key, key, value) for key, value in res]
-        return SimpleVocabulary(items)
+            if index.meta_type in ('FieldIndex',):
+                res.append(index_id)
+
+        return self._create_vocabulary(context, res)
 
 RangeCatalogIndexesVocabularyFactory = RangeCatalogIndexesVocabulary()
 
@@ -112,16 +110,13 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
             index_id = index.getId()
             if index_id not in schema:
                 continue
-            if index.meta_type not in ('FieldIndex',
+            elif index.meta_type not in ('FieldIndex',
                                        'TextIndex', 'ZCTextIndex'):
                 continue
-            res.append(index_id)
-        labels = self._labels(context)
-        res = [(term, labels.get(term, '') or term) for term in res]
-        res.sort(key=operator.itemgetter(1), cmp=compare)
-        res.insert(0, ('', ''))
-        items = [SimpleTerm(key, key, value) for key, value in res]
-        return SimpleVocabulary(items)
+            else:
+                res.append(index_id)
+
+        return self._create_vocabulary(context, res)
 
 AlphabeticCatalogIndexesVocabularyFactory = AlphabeticCatalogIndexesVocabulary()
 
@@ -140,16 +135,10 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
-            if index.meta_type not in ('DateIndex',):
-                continue
-            res.append(index_id)
+            if index.meta_type in ('DateIndex',):
+                res.append(index_id)
 
-        labels = self._labels(context)
-        res = [(term, labels.get(term, '') or term) for term in res]
-        res.sort(key=operator.itemgetter(1), cmp=compare)
-        res.insert(0, ('', ''))
-        items = [SimpleTerm(key, key, value) for key, value in res]
-        return SimpleVocabulary(items)
+        return self._create_vocabulary(context, res)
 
 DateRangeCatalogIndexesVocabularyFactory = DateRangeCatalogIndexesVocabulary()
 
@@ -166,17 +155,13 @@ class TextCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
-            if index.meta_type in ('DateIndex', 'DateRangeIndex'):
-                continue
-            res.append(index_id)
-        labels = self._labels(context)
-        res = [(term, labels.get(term, '') or term) for term in res]
-        res.sort(key=operator.itemgetter(1), cmp=compare)
-        res.insert(0, ('', ''))
-        items = [SimpleTerm(key, key, value) for key, value in res]
-        return SimpleVocabulary(items)
+            if index.meta_type not in ('DateIndex', 'DateRangeIndex'):
+                res.append(index_id)
+
+        return self._create_vocabulary(context, res)
 
 TextCatalogIndexesVocabularyFactory = TextCatalogIndexesVocabulary()
+
 #
 # Path catalog indexes
 #
@@ -190,14 +175,30 @@ class PathCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
-            if index.meta_type not in ('PathIndex', 'ExtendedPathIndex'):
-                continue
-            res.append(index_id)
-        labels = self._labels(context)
-        res = [(term, labels.get(term, '') or term) for term in res]
-        res.sort(key=operator.itemgetter(1), cmp=compare)
-        res.insert(0, ('', ''))
-        items = [SimpleTerm(key, key, value) for key, value in res]
-        return SimpleVocabulary(items)
+            if index.meta_type in ('PathIndex', 'ExtendedPathIndex'):
+                res.append(index_id)
+
+        return self._create_vocabulary(context, res)
 
 PathCatalogIndexesVocabularyFactory = PathCatalogIndexesVocabulary()
+
+#
+# Simple fields catalog indexes
+# Monovalued indexes
+#
+class SimpleFieldCatalogIndexesVocabulary(CatalogIndexesVocabulary):
+    """ Filter catalog indexes for simple fields
+    """
+    def __call__(self, context):
+        """ See IVocabularyFactory interface
+        """
+        ctool = getToolByName(context, 'portal_catalog')
+        res = []
+        for index in ctool.getIndexObjects():
+            index_id = index.getId()
+            if index.meta_type in ('FieldIndex', 'BooleanIndex'):
+                res.append(index_id)
+
+        return self._create_vocabulary(context, res)
+
+SimpleFieldCatalogIndexesVocabularyFactory = SimpleFieldCatalogIndexesVocabulary()

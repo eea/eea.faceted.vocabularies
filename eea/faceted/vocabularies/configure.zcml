@@ -13,7 +13,7 @@
   <utility
     component=".catalog.RangeCatalogIndexesVocabularyFactory"
     name="eea.faceted.vocabularies.RangeCatalogIndexes"
-    />  
+    />
 
   <utility
     component=".catalog.CatalogIndexesVocabularyFactory"
@@ -33,6 +33,11 @@
   <utility
     component=".catalog.TextCatalogIndexesVocabularyFactory"
     name="eea.faceted.vocabularies.TextCatalogIndexes"
+    />
+
+  <utility
+    component=".catalog.SimpleFieldCatalogIndexesVocabularyFactory"
+    name="eea.faceted.vocabularies.SimpleFieldCatalogIndexes"
     />
 
   <utility
