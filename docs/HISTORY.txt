@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.7-dev - (unreleased)
+----------------------
+
 4.6 - (2013-12-09)
 ------------------
 * Added simple field indexes vocabulary for boolean widget.
