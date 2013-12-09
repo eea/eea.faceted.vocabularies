@@ -54,6 +54,8 @@ class CatalogIndexesVocabulary(object):
         return res
 
     def _create_vocabulary(self, context, indexes):
+        """ Create voc
+        """
         labels = self._labels(context)
         res = [(term, labels.get(term, '') or term) for term in indexes]
         res.sort(key=operator.itemgetter(1), cmp=compare)
@@ -201,4 +203,4 @@ class SimpleFieldCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 
         return self._create_vocabulary(context, res)
 
-SimpleFieldCatalogIndexesVocabularyFactory = SimpleFieldCatalogIndexesVocabulary()
+SimpleFieldCatalogIndexesVocFactory = SimpleFieldCatalogIndexesVocabulary()
