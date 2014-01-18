@@ -3,6 +3,8 @@ Changelog
 
 4.7-dev - (unreleased)
 ----------------------
+* Feature: adding Sphinx-generated documentation in Page Template format
+  [batradav refs #9502]
 
 4.6 - (2013-12-09)
 ------------------
