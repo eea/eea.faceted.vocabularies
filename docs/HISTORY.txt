@@ -5,7 +5,7 @@ Changelog
 ----------------------
 * Bug fix: removed wrongly added blockquotes within README.rst
   [ichim-david refs #18064]
-* Change: load plone.reload meta zcml in order to avoid failing tests
+* Change: load zope.browserresource meta zcml in order to avoid failing tests
   [ichim-david refs #18064]
 * Feature: adding Sphinx-generated documentation in Page Template format
   [batradav refs #9502]

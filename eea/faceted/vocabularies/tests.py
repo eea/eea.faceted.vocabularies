@@ -5,8 +5,8 @@ import unittest
 
 import zope.component
 import eea.faceted.vocabularies
-import plone.resource
 
+import zope.browserresource 
 from zope.component.testing import setUp, tearDown
 from zope.configuration.xmlconfig import XMLConfig
 
@@ -15,9 +15,8 @@ def configurationSetUp(self):
     """ Setup
     """
     setUp()
-
     XMLConfig('meta.zcml', zope.component)()
-    XMLConfig('meta.zcml', plone.resource)()
+    XMLConfig('meta.zcml', zope.browserresource)()
     XMLConfig('configure.zcml', eea.faceted.vocabularies)()
 
 
