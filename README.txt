@@ -23,7 +23,7 @@ Installation
 To get started you will simply need to add the package to your "eggs" and
 "zcml" sections, run buildout and restart your Plone instance
 
-  .. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout/
+.. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout/
 
 A sample buildout configuration file, i.e. ``buildout.cfg``, could look like
 this::
@@ -67,6 +67,6 @@ More details under docs/License.txt
 Funding
 =======
 
-  EEA_ - European Enviroment Agency (EU)
+EEA_ - European Enviroment Agency (EU)
 
 .. _EEA: http://www.eea.europa.eu/
