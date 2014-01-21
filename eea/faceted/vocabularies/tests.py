@@ -5,6 +5,7 @@ import unittest
 
 import zope.component
 import eea.faceted.vocabularies
+import plone.resource
 
 from zope.component.testing import setUp, tearDown
 from zope.configuration.xmlconfig import XMLConfig
@@ -14,8 +15,11 @@ def configurationSetUp(self):
     """ Setup
     """
     setUp()
+
     XMLConfig('meta.zcml', zope.component)()
+    XMLConfig('meta.zcml', plone.resource)()
     XMLConfig('configure.zcml', eea.faceted.vocabularies)()
+
 
 def test_suite():
     """ Suite

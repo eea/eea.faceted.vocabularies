@@ -3,6 +3,8 @@ Changelog
 
 4.7-dev - (unreleased)
 ----------------------
+* Change: load plone.reload meta zcml in order to avoid failing tests
+  [ichim-david refs #18064]
 * Feature: adding Sphinx-generated documentation in Page Template format
   [batradav refs #9502]
 
