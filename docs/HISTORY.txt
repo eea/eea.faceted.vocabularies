@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.8-dev - (unreleased)
+----------------------
+
 4.7 - (2014-01-22)
 ------------------
 * Bug fix: removed wrongly added blockquotes within README.rst
