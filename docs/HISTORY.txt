@@ -4,6 +4,10 @@ Changelog
 4.8-dev - (unreleased)
 ----------------------
 
+* Add DateRecurringIndex to eea.faceted.vocabularies.DateRangeCatalogIndexes.
+  Needed for start and end-date of events by p.a.contenttypes with p.a.event.
+  [pbauer]
+
 4.7 - (2014-01-22)
 ------------------
 * Bug fix: removed wrongly added blockquotes within README.rst

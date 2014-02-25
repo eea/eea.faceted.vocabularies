@@ -137,7 +137,7 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
-            if index.meta_type in ('DateIndex',):
+            if index.meta_type in ('DateIndex', 'DateRecurringIndex'):
                 res.append(index_id)
 
         return self._create_vocabulary(context, res)
