@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.9-dev - (unreleased)
+----------------------
+
 4.8 - (2014-05-13)
 ------------------
 * Add DateRecurringIndex to eea.faceted.vocabularies.DateRangeCatalogIndexes.
