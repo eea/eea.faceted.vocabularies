@@ -23,5 +23,3 @@ class PortalTypesVocabulary(object):
         items.sort(key=operator.itemgetter(0), cmp=compare)
         items = [SimpleTerm(i[1], i[1], i[0]) for i in items]
         return SimpleVocabulary(items)
-
-PortalTypesVocabularyFactory = PortalTypesVocabulary()

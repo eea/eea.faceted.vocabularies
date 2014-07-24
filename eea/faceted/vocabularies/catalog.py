@@ -30,9 +30,6 @@ class ObjectProvidesVocabulary(object):
         items.sort(key=str.lower)
         items = [SimpleTerm(i, i, i) for i in items]
         return SimpleVocabulary(items)
-
-ObjectProvidesVocabularyFactory = ObjectProvidesVocabulary()
-
 #
 # Catalog indexes
 #
@@ -70,8 +67,6 @@ class CatalogIndexesVocabulary(object):
         indexes = ctool.Indexes.keys()
         return self._create_vocabulary(context, indexes)
 
-CatalogIndexesVocabularyFactory = CatalogIndexesVocabulary()
-
 #
 # Rangeable catalog indexes
 #
@@ -91,8 +86,6 @@ class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
                 res.append(index_id)
 
         return self._create_vocabulary(context, res)
-
-RangeCatalogIndexesVocabularyFactory = RangeCatalogIndexesVocabulary()
 
 #
 # Alphabetic catalog indexes
@@ -120,8 +113,6 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 
         return self._create_vocabulary(context, res)
 
-AlphabeticCatalogIndexesVocabularyFactory = AlphabeticCatalogIndexesVocabulary()
-
 #
 # Date range catalog indexes
 #
@@ -142,8 +133,6 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 
         return self._create_vocabulary(context, res)
 
-DateRangeCatalogIndexesVocabularyFactory = DateRangeCatalogIndexesVocabulary()
-
 #
 # Text catalog indexes
 #
@@ -161,8 +150,6 @@ class TextCatalogIndexesVocabulary(CatalogIndexesVocabulary):
                 res.append(index_id)
 
         return self._create_vocabulary(context, res)
-
-TextCatalogIndexesVocabularyFactory = TextCatalogIndexesVocabulary()
 
 #
 # Path catalog indexes
@@ -182,8 +169,6 @@ class PathCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 
         return self._create_vocabulary(context, res)
 
-PathCatalogIndexesVocabularyFactory = PathCatalogIndexesVocabulary()
-
 #
 # Simple fields catalog indexes
 # Monovalued indexes
@@ -202,5 +187,17 @@ class SimpleFieldCatalogIndexesVocabulary(CatalogIndexesVocabulary):
                 res.append(index_id)
 
         return self._create_vocabulary(context, res)
-
-SimpleFieldCatalogIndexesVocFactory = SimpleFieldCatalogIndexesVocabulary()
+#
+# Sorting catalog indexes
+#
+class SortingCatalogIndexesVocabulary(CatalogIndexesVocabulary):
+    """ Also include sort_on and sort_order indexes
+    """
+    def __call__(self, context):
+        voc = super(SortingCatalogIndexesVocabulary, self).__call__(context)
+        terms = voc._terms
+        terms.extend((
+            SimpleTerm('sort_on', 'sort_on', 'Sort On'),
+            SimpleTerm('sort_order', 'sort_order', 'Sort Order')
+        ))
+        return SimpleVocabulary(terms)

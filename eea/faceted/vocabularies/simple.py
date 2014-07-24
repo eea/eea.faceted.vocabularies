@@ -24,7 +24,6 @@ class UseCatalogVocabulary(object):
         )
         return SimpleVocabulary(items)
 
-UseCatalogVocabularyFactory = UseCatalogVocabulary()
 #
 # JsTree themes
 #
@@ -42,5 +41,3 @@ class JsTreeThemes(object):
             SimpleTerm('green', 'green', _('Green')),
         )
         return SimpleVocabulary(items)
-
-JsTreeThemesFactory = JsTreeThemes()

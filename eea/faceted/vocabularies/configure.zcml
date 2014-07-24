@@ -8,86 +8,91 @@
   <i18n:registerTranslations directory="locales" />
 
   <utility
-    component=".catalog.ObjectProvidesVocabularyFactory"
+    factory=".catalog.ObjectProvidesVocabulary"
     name="eea.faceted.vocabularies.ObjectProvides"
     />
   <utility
-    component=".catalog.RangeCatalogIndexesVocabularyFactory"
+    factory=".catalog.RangeCatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.RangeCatalogIndexes"
     />
 
   <utility
-    component=".catalog.CatalogIndexesVocabularyFactory"
+    factory=".catalog.CatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.CatalogIndexes"
     />
 
   <utility
-    component=".catalog.AlphabeticCatalogIndexesVocabularyFactory"
+    factory=".catalog.SortingCatalogIndexesVocabulary"
+    name="eea.faceted.vocabularies.SortingCatalogIndexes"
+    />
+
+  <utility
+    factory=".catalog.AlphabeticCatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.AlphabeticCatalogIndexes"
     />
 
   <utility
-    component=".catalog.DateRangeCatalogIndexesVocabularyFactory"
+    factory=".catalog.DateRangeCatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.DateRangeCatalogIndexes"
     />
 
   <utility
-    component=".catalog.TextCatalogIndexesVocabularyFactory"
+    factory=".catalog.TextCatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.TextCatalogIndexes"
     />
 
   <utility
-    component=".catalog.SimpleFieldCatalogIndexesVocFactory"
+    factory=".catalog.SimpleFieldCatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.SimpleFieldCatalogIndexes"
     />
 
   <utility
-    component=".catalog.PathCatalogIndexesVocabularyFactory"
+    factory=".catalog.PathCatalogIndexesVocabulary"
     name="eea.faceted.vocabularies.PathCatalogIndexes"
     />
 
   <utility
-    component=".portal.PortalVocabulariesVocabularyFactory"
+    factory=".portal.PortalVocabulariesVocabulary"
     name="eea.faceted.vocabularies.PortalVocabularies"
     />
 
   <utility
-    component=".portal.PortalLanguagesVocabularyFactory"
+    factory=".portal.PortalLanguagesVocabulary"
     name="eea.faceted.vocabularies.PortalLanguages"
     />
 
   <utility
-    component=".types.PortalTypesVocabularyFactory"
+    factory=".types.PortalTypesVocabulary"
     name="eea.faceted.vocabularies.PortalTypes"
     />
 
   <utility
-    component=".faceted.FacetedPortalTypesVocabularyFactory"
+    factory=".faceted.FacetedPortalTypesVocabulary"
     name="eea.faceted.vocabularies.FacetedPortalTypes"
     />
 
   <utility
-    component=".faceted.FacetedOnlyPortalTypesVocabularyFactory"
+    factory=".faceted.FacetedOnlyPortalTypesVocabulary"
     name="eea.faceted.vocabularies.FacetedOnlyPortalTypes"
     />
 
   <utility
-    component=".position.VocabularyFactory"
+    factory=".position.WidgetPositions"
     name="eea.faceted.vocabularies.WidgetPositions"
     />
 
   <utility
-    component=".section.VocabularyFactory"
+    factory=".section.WidgetSections"
     name="eea.faceted.vocabularies.WidgetSections"
     />
 
   <utility
-    component=".simple.UseCatalogVocabularyFactory"
+    factory=".simple.UseCatalogVocabulary"
     name="eea.faceted.vocabularies.UseCatalog"
     />
 
   <utility
-    component=".simple.JsTreeThemesFactory"
+    factory=".simple.JsTreeThemes"
     name="eea.faceted.vocabularies.JsTreeThemes"
     />
 

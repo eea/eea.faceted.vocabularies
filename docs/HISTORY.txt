@@ -3,9 +3,15 @@ Changelog
 
 5.0-dev - (unreleased)
 ----------------------
+* Feature: Added SortingCatalogIndexesVocabulary that include also sort_on and
+  sort_order indexes in order to be used with TAL Expression Faceted Widget
+  [avoinea refs #44 github eea.facetednavigation]
+* Cleanup: Removed useless Vocabulary Factories instances from python code.
+  [avoinea]
 
 4.9 - (2014-06-06)
 ------------------
+* Nothing changed
 
 4.8 - (2014-05-13)
 ------------------

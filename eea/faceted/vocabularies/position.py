@@ -23,5 +23,3 @@ class WidgetPositions(object):
             SimpleTerm('bottom', 'bottom', _('Bottom')),
         )
         return SimpleVocabulary(positions)
-
-VocabularyFactory = WidgetPositions()

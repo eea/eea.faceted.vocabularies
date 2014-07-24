@@ -20,8 +20,6 @@ class WidgetSections(object):
         )
         return SimpleVocabulary(items)
 
-VocabularyFactory = WidgetSections()
-
 __all__ = [
    IVocabularyFactory.__name__,
 ]

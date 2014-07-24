@@ -38,7 +38,6 @@ class FacetedPortalTypesVocabulary(object):
         items = [SimpleTerm(i[0], i[0], i[1]) for i in items]
         return SimpleVocabulary(items)
 
-FacetedPortalTypesVocabularyFactory = FacetedPortalTypesVocabulary()
 #
 # Get only portal_faceted types
 #
@@ -62,5 +61,3 @@ class FacetedOnlyPortalTypesVocabulary(object):
 
         items = [SimpleTerm(i[0], i[0], i[1]) for i in items]
         return SimpleVocabulary(items)
-
-FacetedOnlyPortalTypesVocabularyFactory = FacetedOnlyPortalTypesVocabulary()

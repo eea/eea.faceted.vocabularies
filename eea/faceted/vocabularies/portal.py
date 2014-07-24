@@ -40,8 +40,6 @@ class PortalVocabulariesVocabulary(object):
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
 
-PortalVocabulariesVocabularyFactory = PortalVocabulariesVocabulary()
-
 #
 # portal_languages
 #
@@ -64,5 +62,3 @@ class PortalLanguagesVocabulary(object):
         res.sort(key=operator.itemgetter(1), cmp=compare)
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
-
-PortalLanguagesVocabularyFactory = PortalLanguagesVocabulary()

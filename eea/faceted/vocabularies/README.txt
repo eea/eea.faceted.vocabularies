@@ -51,3 +51,11 @@ Faceted widgets possible sections
 
     >>> [term.value for term in voc()]
     ['default', 'advanced']
+
+eea.faceted.vocabularies.SortingCatalog
+---------------------------------------
+Catalog indexes including sorting ones
+
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.SortingCatalogIndexes')
+    >>> voc
+    <eea.faceted.vocabularies.catalog.SortingCatalogIndexesVocabulary object at ...>
