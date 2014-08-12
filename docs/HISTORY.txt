@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.1-dev - (unreleased)
+----------------------
+
 5.0 - (2014-08-12)
 ------------------
 * Feature: Added SortingCatalogIndexesVocabulary that include also sort_on and
