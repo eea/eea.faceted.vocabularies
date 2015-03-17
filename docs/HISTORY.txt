@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.2.dev0 - (unreleased)
+-----------------------
+
 5.1 - (2015-03-17)
 ------------------
 * Change: Switched to curl in the jenkins build install script
