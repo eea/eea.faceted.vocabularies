@@ -6,7 +6,7 @@ import unittest
 import zope.component
 import eea.faceted.vocabularies
 
-import zope.browserresource 
+import zope.browserresource
 from zope.component.testing import setUp, tearDown
 from zope.configuration.xmlconfig import XMLConfig
 
