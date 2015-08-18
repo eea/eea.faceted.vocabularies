@@ -1,8 +1,8 @@
 Changelog
 =========
 
-5.2.dev0 - (unreleased)
------------------------
+5.2 - (2015-08-18)
+------------------
 * Change: Auto-include zcml within plone context in order to make this package
   work without having to add it within buildout zcml directive.
   [avoinea]
