@@ -8,6 +8,11 @@
   <i18n:registerTranslations directory="locales" />
 
   <utility
+    factory=".autocomplete.AutocompleteVocabularies"
+    name="eea.faceted.vocabularies.AutocompleteVocabularies"
+    />
+
+  <utility
     factory=".catalog.ObjectProvidesVocabulary"
     name="eea.faceted.vocabularies.ObjectProvides"
     />
