@@ -60,9 +60,9 @@ Catalog indexes including sorting ones
     >>> voc
     <eea.faceted.vocabularies.catalog.SortingCatalogIndexesVocabulary object at ...>
 
-eea.faceted.vocabularies.SortingCatalog
+eea.faceted.vocabularies.AutocompleteVocabularies
 ---------------------------------------
-Catalog indexes including sorting ones
+Possible autocomplete suggestions views
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.AutocompleteVocabularies')
     >>> voc
