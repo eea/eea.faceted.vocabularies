@@ -14,17 +14,20 @@ from zope.schema.vocabulary import SimpleVocabulary
 
 class AutocompleteVocabulary(object):
     """
+    Vocabulary factory listing autocomplete suggestions views
     """
     implements(IVocabularyFactory)
 
     def __call__(self, context):
         """
+        See IVocabularyFactory interface
         """
         factories = getAdapters(
             (context, context.REQUEST),
             IAutocompleteSuggest
         )
-        terms = [SimpleTerm(f[0], f[0], getattr(f[1], 'label', f[0])) for f in factories]
+        terms = [SimpleTerm(f[0], f[0], getattr(f[1], 'label', f[0]))
+                 for f in factories]
         return SimpleVocabulary(terms)
 
 
