@@ -64,6 +64,6 @@ eea.faceted.vocabularies.AutocompleteVocabularies
 ---------------------------------------
 Possible autocomplete suggestions views
 
-    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.AutocompleteVocabularies')
+    >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.AutocompleteViews')
     >>> voc
-    <eea.faceted.vocabularies.autocomplete.AutocompleteVocabularies object at ...>
+    <eea.faceted.vocabularies.autocomplete.AutocompleteVocabulary object at ...>
