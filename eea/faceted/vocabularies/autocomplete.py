@@ -1,4 +1,4 @@
-""" Autocomplete widget specific vocabularies
+""" Autocomplete widget specific vocabulary
 """
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 
@@ -12,7 +12,7 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 
-class AutocompleteVocabularies(object):
+class AutocompleteVocabulary(object):
     """
     """
     implements(IVocabularyFactory)
