@@ -3,6 +3,9 @@ Changelog
 
 5.3.dev0 - (unreleased)
 -----------------------
+* Feature: Added AutocompleteVocabulary listing autocomplete suggestion views
+  for the autocomplete widget.
+  [sdelcourt]
 
 5.2 - (2015-08-18)
 ------------------
