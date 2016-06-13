@@ -4,6 +4,7 @@ import operator
 from eea.faceted.vocabularies.utils import compare
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.interface import implements
+from zope.component.hooks import getSite
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
@@ -15,10 +16,10 @@ class ObjectProvidesVocabulary(object):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         if not ctool:
             return SimpleVocabulary([])
 
@@ -38,10 +39,10 @@ class CatalogIndexesVocabulary(object):
     """
     implements(IVocabularyFactory)
 
-    def _labels(self, context):
+    def _labels(self):
         """ Get indexes labels from portal_atct settings
         """
-        atool = getToolByName(context, 'portal_atct')
+        atool = getToolByName(getSite(), 'portal_atct')
         indexes = atool.getIndexes()
         res = {}
         for index in indexes:
@@ -50,22 +51,22 @@ class CatalogIndexesVocabulary(object):
 
         return res
 
-    def _create_vocabulary(self, context, indexes):
+    def _create_vocabulary(self, indexes):
         """ Create voc
         """
-        labels = self._labels(context)
+        labels = self._labels()
         res = [(term, labels.get(term, '') or term) for term in indexes]
         res.sort(key=operator.itemgetter(1), cmp=compare)
         res.insert(0, ('', ''))
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         indexes = ctool.Indexes.keys()
-        return self._create_vocabulary(context, indexes)
+        return self._create_vocabulary(indexes)
 
 #
 # Rangeable catalog indexes
@@ -75,17 +76,17 @@ class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
             if index.meta_type in ('FieldIndex',):
                 res.append(index_id)
 
-        return self._create_vocabulary(context, res)
+        return self._create_vocabulary(res)
 
 #
 # Alphabetic catalog indexes
@@ -95,10 +96,10 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         schema = ctool.schema()
         res = []
         for index in ctool.getIndexObjects():
@@ -111,7 +112,7 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
             else:
                 res.append(index_id)
 
-        return self._create_vocabulary(context, res)
+        return self._create_vocabulary(res)
 
 #
 # Date range catalog indexes
@@ -121,17 +122,17 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
             if index.meta_type in ('DateIndex', 'DateRecurringIndex'):
                 res.append(index_id)
 
-        return self._create_vocabulary(context, res)
+        return self._create_vocabulary(res)
 
 #
 # Text catalog indexes
@@ -139,17 +140,17 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 class TextCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for text widget
     """
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
             if index.meta_type not in ('DateIndex', 'DateRangeIndex'):
                 res.append(index_id)
 
-        return self._create_vocabulary(context, res)
+        return self._create_vocabulary(res)
 
 #
 # Path catalog indexes
@@ -157,17 +158,17 @@ class TextCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 class PathCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for path widget
     """
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
             if index.meta_type in ('PathIndex', 'ExtendedPathIndex'):
                 res.append(index_id)
 
-        return self._create_vocabulary(context, res)
+        return self._create_vocabulary(res)
 
 #
 # Simple fields catalog indexes
@@ -176,25 +177,25 @@ class PathCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 class SimpleFieldCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for simple fields
     """
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        ctool = getToolByName(context, 'portal_catalog')
+        ctool = getToolByName(getSite(), 'portal_catalog')
         res = []
         for index in ctool.getIndexObjects():
             index_id = index.getId()
             if index.meta_type in ('FieldIndex', 'BooleanIndex'):
                 res.append(index_id)
 
-        return self._create_vocabulary(context, res)
+        return self._create_vocabulary(res)
 #
 # Sorting catalog indexes
 #
 class SortingCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Also include sort_on and sort_order indexes
     """
-    def __call__(self, context):
-        voc = super(SortingCatalogIndexesVocabulary, self).__call__(context)
+    def __call__(self, *args, **kwargs):
+        voc = super(SortingCatalogIndexesVocabulary, self).__call__()
         terms = voc._terms
         terms.extend((
             SimpleTerm('sort_on', 'sort_on', 'Sort On'),

@@ -3,6 +3,9 @@ Changelog
 
 5.4.dev0 - (unreleased)
 -----------------------
+* Bug fix: Use getSite() instead of context to getToolByName in order not to
+  break if no Persistent context provided.
+  [avoinea]
 
 5.3 - (2015-10-05)
 ------------------
