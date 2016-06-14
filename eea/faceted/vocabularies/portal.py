@@ -33,6 +33,10 @@ class PortalVocabulariesVocabulary(object):
         res.extend([(factory[0], factory[0]) for factory in factories
                     if factory[0] not in atvocabulary_ids])
 
+        # play nice with collective.solr I18NFacetTitlesVocabularyFactory
+        # and probably others
+        if len(res) and res[0] != ('', ''):
+            res.insert(0, ('', ''))
         res.sort(key=operator.itemgetter(1), cmp=compare)
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
