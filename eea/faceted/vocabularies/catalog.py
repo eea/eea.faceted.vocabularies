@@ -106,13 +106,14 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
             index_id = index.getId()
             if index_id not in schema:
                 continue
-            elif index.meta_type not in ('FieldIndex',
-                                       'TextIndex', 'ZCTextIndex'):
+            elif index.meta_type not in (
+                    'FieldIndex', 'TextIndex', 'ZCTextIndex'):
                 continue
             else:
                 res.append(index_id)
 
         return self._create_vocabulary(res)
+
 
 #
 # Date range catalog indexes
@@ -134,6 +135,7 @@ class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 
         return self._create_vocabulary(res)
 
+
 #
 # Text catalog indexes
 #
@@ -151,6 +153,7 @@ class TextCatalogIndexesVocabulary(CatalogIndexesVocabulary):
                 res.append(index_id)
 
         return self._create_vocabulary(res)
+
 
 #
 # Path catalog indexes
@@ -170,9 +173,10 @@ class PathCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 
         return self._create_vocabulary(res)
 
+
 #
 # Simple fields catalog indexes
-# Monovalued indexes
+# Mono valued indexes
 #
 class SimpleFieldCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for simple fields
@@ -188,6 +192,8 @@ class SimpleFieldCatalogIndexesVocabulary(CatalogIndexesVocabulary):
                 res.append(index_id)
 
         return self._create_vocabulary(res)
+
+
 #
 # Sorting catalog indexes
 #

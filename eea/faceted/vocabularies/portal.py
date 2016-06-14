@@ -3,6 +3,7 @@
 import operator
 from eea.faceted.vocabularies.utils import compare
 from zope.component import getUtilitiesFor
+from zope.component.hooks import getSite
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
@@ -17,11 +18,11 @@ class PortalVocabulariesVocabulary(object):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
         res = []
-        vtool = getToolByName(context, 'portal_vocabularies', None)
+        vtool = getToolByName(getSite(), 'portal_vocabularies', None)
         if vtool:
             vocabularies = vtool.objectValues()
             res.extend([(term.getId(), term.title_or_id())
@@ -33,10 +34,6 @@ class PortalVocabulariesVocabulary(object):
                     if factory[0] not in atvocabulary_ids])
 
         res.sort(key=operator.itemgetter(1), cmp=compare)
-        # play nice with collective.solr I18NFacetTitlesVocabularyFactory
-        # and probably others
-        if len(res) and res[0] != ('', ''):
-            res.insert(0, ('', ''))
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
 
@@ -48,10 +45,10 @@ class PortalLanguagesVocabulary(object):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
-        portal_languages = getToolByName(context, 'portal_languages', None)
+        portal_languages = getToolByName(getSite(), 'portal_languages', None)
         if not portal_languages:
             return SimpleVocabulary([])
 
