@@ -1,13 +1,16 @@
 """ Catalog specific vocabularies
 """
 import operator
-from eea.faceted.vocabularies.utils import compare
-from eea.faceted.vocabularies.utils import IVocabularyFactory
+from plone.app.querystring.interfaces import IQuerystringRegistryReader
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 from zope.interface import implements
 from zope.component.hooks import getSite
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
+from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import IVocabularyFactory
 #
 # Object provides
 #
@@ -42,13 +45,13 @@ class CatalogIndexesVocabulary(object):
     def _labels(self):
         """ Get indexes labels from portal_atct settings
         """
-        atool = getToolByName(getSite(), 'portal_atct')
-        indexes = atool.getIndexes()
-        res = {}
-        for index in indexes:
-            ob = atool.getIndex(index)
-            res[index] = ob.friendlyName
+        registry = getUtility(IRegistry)
+        config = IQuerystringRegistryReader(registry)()
+        indexes = config.get('indexes', {})
 
+        res = {}
+        for index, ob in indexes.items():
+            res[index] = ob.get('title', index)
         return res
 
     def _create_vocabulary(self, indexes):
@@ -87,6 +90,7 @@ class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
                 res.append(index_id)
 
         return self._create_vocabulary(res)
+
 
 #
 # Alphabetic catalog indexes

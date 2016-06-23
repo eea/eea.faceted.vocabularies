@@ -3,6 +3,9 @@ Changelog
 
 5.4.dev0 - (unreleased)
 -----------------------
+* Change: Drop dependency on deprecated portal_atct.
+  Use IQuerystringRegistryReader instead.
+  [avoinea]
 * Bug fix: Use getSite() instead of context to getToolByName in order not to
   break if no Persistent context provided.
   [avoinea]
