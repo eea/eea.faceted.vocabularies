@@ -7,12 +7,13 @@ from zope.schema.vocabulary import SimpleTerm
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 from eea.faceted.vocabularies import EEAMessageFactory as _
 
+
 class WidgetPositions(object):
     """ Widget position in page
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context=None):
+    def __call__(self, *args, **kwargs):
 
         positions = (
             SimpleTerm('top', 'top', _('Top')),
