@@ -7,37 +7,41 @@ NAME = 'eea.faceted.vocabularies'
 PATH = NAME.split('.') + ['version.txt']
 VERSION = open(os.path.join(*PATH)).read().strip()
 
-tests_require = [
-    'zope.component',
-    ]
-
 setup(name=NAME,
       version=VERSION,
       description="EEA Faceted Vocabularies",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
+        "Environment :: Web Environment",
+        "Framework :: Zope2",
+        "Framework :: Zope3",
+        "Framework :: Plone",
+        "Framework :: Plone :: 5.0",
         "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        ],
-      keywords='zope3 vocabularies faceted eea plone zope python',
-      author='European Environment Agency',
-      author_email="webadmin@eea.europa.eu",
+        "Programming Language :: Python :: 2.7",
+        "Operating System :: OS Independent",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+      ],
+      keywords='Zope3 Vocabularies Faceted EEA Plone Zope Python',
+      author='European Environment Agency: IDM2 A-Team',
+      author_email="eea-edw-a-team-alerts@googlegroups.com",
       url="http://svn.eionet.europa.eu/projects/",
-      license='GPL',
+      license='GPL version 2',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['eea', 'eea.faceted'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
-
       ],
-      tests_require=tests_require,
-      extras_require=dict(test=tests_require),
+      extras_require={
+        'test': [
+            'plone.app.testing',
+        ]
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone
-      """
-      )
+      """,
+)

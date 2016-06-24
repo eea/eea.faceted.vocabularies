@@ -7,6 +7,7 @@ from zope.schema.vocabulary import SimpleTerm
 
 from eea.faceted.vocabularies import EEAMessageFactory as _
 
+
 #
 # Use catalog
 #
@@ -15,7 +16,7 @@ class UseCatalogVocabulary(object):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context=None):
+    def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
         """
         items = (
@@ -23,6 +24,7 @@ class UseCatalogVocabulary(object):
             SimpleTerm('portal_catalog', 'portal_catalog', _('Yes')),
         )
         return SimpleVocabulary(items)
+
 
 #
 # JsTree themes
@@ -32,7 +34,7 @@ class JsTreeThemes(object):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context=None):
+    def __call__(self, *args, **kwargs):
 
         items = (
             SimpleTerm('default', 'default', _('Default')),

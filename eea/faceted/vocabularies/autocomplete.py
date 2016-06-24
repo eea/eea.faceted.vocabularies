@@ -1,8 +1,7 @@
 """ Autocomplete widget specific vocabulary
 """
-from eea.faceted.vocabularies.utils import IVocabularyFactory
-
 from zope.component import getAdapters
+from zope.component.hooks import getSite
 
 from zope.interface import Attribute
 from zope.interface import Interface
@@ -11,6 +10,8 @@ from zope.interface import implements
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
+from eea.faceted.vocabularies.utils import IVocabularyFactory
+
 
 class AutocompleteVocabulary(object):
     """
@@ -18,14 +19,12 @@ class AutocompleteVocabulary(object):
     """
     implements(IVocabularyFactory)
 
-    def __call__(self, context):
+    def __call__(self, *args, **kwargs):
         """
         See IVocabularyFactory interface
         """
-        factories = getAdapters(
-            (context, context.REQUEST),
-            IAutocompleteSuggest
-        )
+        site = getSite()
+        factories = getAdapters((site, site.REQUEST), IAutocompleteSuggest)
         terms = [SimpleTerm(f[0], f[0], getattr(f[1], 'label', f[0]))
                  for f in factories]
         return SimpleVocabulary(terms)
