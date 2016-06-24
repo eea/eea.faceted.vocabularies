@@ -1,8 +1,10 @@
 Changelog
 =========
 
-5.4.dev0 - (unreleased)
+6.0.dev0 - (unreleased)
 -----------------------
+* Feature: Plone 5 compatible
+  [avoinea]
 * Change: Drop dependency on deprecated portal_atct.
   Use IQuerystringRegistryReader instead.
   [avoinea]
