@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.1.dev0 - (unreleased)
+-----------------------
+
 6.0 - (2016-06-29)
 ------------------
 * Feature: Plone 5 compatible
