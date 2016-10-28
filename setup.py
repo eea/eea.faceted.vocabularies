@@ -10,7 +10,7 @@ VERSION = open(os.path.join(*PATH)).read().strip()
 setup(name=NAME,
       version=VERSION,
       description="EEA Faceted Vocabularies",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
         "Environment :: Web Environment",
