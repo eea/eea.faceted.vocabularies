@@ -1,10 +1,13 @@
 Changelog
 =========
 
-6.1.dev0 - (unreleased)
+6.2.dev0 - (unreleased)
 -----------------------
+
+6.1 - (2017-04-24)
+------------------
 * Change: updated package information
-[eduard-fironda]
+  [eduard-fironda]
 
 6.0 - (2016-06-29)
 ------------------
