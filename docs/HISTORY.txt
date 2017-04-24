@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.2.dev0 - (unreleased)
+-----------------------
+
 6.1 - (2017-04-24)
 ------------------
 * Change: updated package information
