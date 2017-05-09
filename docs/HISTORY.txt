@@ -3,6 +3,8 @@ Changelog
 
 6.2.dev0 - (unreleased)
 -----------------------
+* Change: fixed PyLint warnings and errors
+  [eduard-fironda refs #84949]
 
 6.1 - (2017-04-24)
 ------------------

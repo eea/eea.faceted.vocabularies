@@ -1,11 +1,10 @@
 """ Widget Sections Vocabularies
 """
 from eea.faceted.vocabularies.utils import IVocabularyFactory
+from eea.faceted.vocabularies import EEAMessageFactory as _
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
-
-from eea.faceted.vocabularies import EEAMessageFactory as _
 
 
 class WidgetSections(object):
