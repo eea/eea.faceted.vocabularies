@@ -4,9 +4,9 @@ import doctest
 import unittest
 
 import zope.component
+import zope.browserresource
 import eea.faceted.vocabularies
 
-import zope.browserresource
 from zope.component.testing import setUp, tearDown
 from zope.configuration.xmlconfig import XMLConfig
 

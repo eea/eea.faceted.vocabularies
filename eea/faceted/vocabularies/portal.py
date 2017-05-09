@@ -2,9 +2,9 @@
 """
 import operator
 from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.component import getUtilitiesFor
 from zope.component.hooks import getSite
-from eea.faceted.vocabularies.utils import IVocabularyFactory
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
