@@ -5,10 +5,9 @@ import unittest
 
 import zope.component
 import zope.browserresource
-import eea.faceted.vocabularies
-
 from zope.component.testing import setUp, tearDown
 from zope.configuration.xmlconfig import XMLConfig
+import eea.faceted.vocabularies
 
 
 def configurationSetUp(self):
