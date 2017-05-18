@@ -10,6 +10,7 @@ from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
 
+
 #
 # portal_vocabularies
 #
@@ -35,11 +36,12 @@ class PortalVocabulariesVocabulary(object):
 
         # play nice with collective.solr I18NFacetTitlesVocabularyFactory
         # and probably others
-        if len(res) and res[0] != ('', ''):
+        if res and res[0] != ('', ''):
             res.insert(0, ('', ''))
         res.sort(key=operator.itemgetter(1), cmp=compare)
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
+
 
 #
 # portal_languages
