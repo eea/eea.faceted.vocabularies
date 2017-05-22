@@ -1,8 +1,11 @@
 Changelog
 =========
 
-6.3.dev0 - (unreleased)
+6.4.dev0 - (unreleased)
 -----------------------
+
+6.3 - (2017-05-22)
+------------------
 * Change: fixed PyLint warnings and errors
   [valipod refs #84949]
 
