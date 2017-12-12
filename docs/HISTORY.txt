@@ -1,8 +1,11 @@
 Changelog
 =========
 
-6.5.dev0 - (unreleased)
+6.6.dev0 - (unreleased)
 -----------------------
+
+6.5 - (2017-12-12)
+------------------
 * Change: Replace eeacms/zptlint with eeacms/plone-test:4 zptlint
   [avoinea refs #90415]
 
