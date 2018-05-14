@@ -6,6 +6,9 @@ Changelog
 * Change: Replace eeacms/zptlint with eeacms/plone-test:4 zptlint
   [avoinea refs #90415]
 
+* Fix double empty entry of first term in vocabulary
+  [tomgross]
+
 6.4 - (2017-11-07)
 ------------------
 * Change: Remove Sphinx generated documentation
