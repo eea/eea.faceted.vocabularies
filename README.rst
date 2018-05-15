@@ -1,8 +1,12 @@
 ========================
 EEA Faceted Vocabularies
 ========================
-.. image:: http://ci.eionet.europa.eu/job/eea/job/eea.faceted.vocabularies/job/master/badge/icon
-  :target: http://ci.eionet.europa.eu/job/eea/job/eea.faceted.vocabularies/job/master/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.faceted.vocabularies/develop
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.faceted.vocabularies/job/develop/display/redirect
+  :alt: Develop
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.faceted.vocabularies/master
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.faceted.vocabularies/job/master/display/redirect
+  :alt: Master
 
 Overview
 ========
