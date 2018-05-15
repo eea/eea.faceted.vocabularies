@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.7-dev0 - (unreleased)
+---------------------
+
 6.6 - (2018-05-15)
 ------------------
 * Fix double empty entry of first term in vocabulary
@@ -160,4 +163,3 @@ Changelog
 1.0 (2009-10-29)
 ----------------
 * Initial release
-
