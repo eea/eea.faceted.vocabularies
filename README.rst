@@ -42,8 +42,8 @@ this::
 Source code
 ===========
 
-Latest source code in EEA svn:
-   http://svn.eionet.europa.eu/repositories/Zope/trunk/eea.faceted.vocabularies
+Latest source code in EEA GitHub:
+   https://github.com/eea/eea.faceted.vocabularies
 
 
 Copyright and license
