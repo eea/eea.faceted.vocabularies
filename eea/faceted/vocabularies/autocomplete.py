@@ -5,7 +5,7 @@ from zope.component.hooks import getSite
 
 from zope.interface import Attribute
 from zope.interface import Interface
-from zope.interface import implements
+from zope.interface import implementer
 
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
@@ -13,11 +13,11 @@ from zope.schema.vocabulary import SimpleVocabulary
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 
 
+@implementer(IVocabularyFactory)
 class AutocompleteVocabulary(object):
     """
     Vocabulary factory listing autocomplete suggestions views
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """
