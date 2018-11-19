@@ -1,23 +1,23 @@
 """ Portal tools specific vocabularies
 """
-import operator
-from eea.faceted.vocabularies.utils import compare
 from eea.faceted.vocabularies.utils import IVocabularyFactory
+from eea.faceted.vocabularies.utils import lowercase_text
 from zope.component import getUtilitiesFor
 from zope.component.hooks import getSite
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
 
+import six
 
 #
 # portal_vocabularies
 #
+@implementer(IVocabularyFactory)
 class PortalVocabulariesVocabulary(object):
     """ Return vocabulularies in portal_vocabulary
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
@@ -33,8 +33,8 @@ class PortalVocabulariesVocabulary(object):
         factories = getUtilitiesFor(IVocabularyFactory)
         res.extend([(factory[0], factory[0]) for factory in factories
                     if factory[0] not in atvocabulary_ids])
-        
-        res.sort(key=operator.itemgetter(1), cmp=compare)
+
+        res.sort(key=lowercase_text)
         # play nice with collective.solr I18NFacetTitlesVocabularyFactory
         # and probably others
         if res and res[0] != ('', ''):
@@ -50,10 +50,10 @@ class PortalVocabulariesVocabulary(object):
 #
 # portal_languages
 #
+@implementer(IVocabularyFactory)
 class PortalLanguagesVocabulary(object):
     """ Return portal types as vocabulary
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
@@ -63,9 +63,9 @@ class PortalLanguagesVocabulary(object):
             return SimpleVocabulary([])
 
         res = portal_languages.listSupportedLanguages()
-        res = [(x, (isinstance(y, str) and y.decode('utf-8') or y))
+        res = [(x, (isinstance(y, six.binary_type) and y.decode('utf-8') or y))
                for x, y in res]
 
-        res.sort(key=operator.itemgetter(1), cmp=compare)
+        res.sort(key=lowercase_text)
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)

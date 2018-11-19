@@ -1,6 +1,6 @@
 """ Widget positions vocabularies
 """
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 
@@ -8,10 +8,10 @@ from eea.faceted.vocabularies.utils import IVocabularyFactory
 from eea.faceted.vocabularies import EEAMessageFactory as _
 
 
+@implementer(IVocabularyFactory)
 class WidgetPositions(object):
     """ Widget position in page
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
 
