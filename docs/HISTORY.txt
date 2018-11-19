@@ -3,6 +3,8 @@ Changelog
 
 6.7-dev0 - (unreleased)
 ---------------------
+* Feature: Added support for Python 3
+  [pbauer refs #10]
 * Change: updated URLs pointing to eea.europa.eu with https://
   [alecghica refs #95849]
 
