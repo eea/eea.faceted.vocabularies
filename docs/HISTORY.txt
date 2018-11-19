@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.7-dev0 - (unreleased)
+6.7 - (2018-11-19)
 ---------------------
 * Feature: Added support for Python 3
   [pbauer refs #10]
