@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.8-dev0 - (unreleased)
+---------------------
+
 6.7 - (2018-11-19)
 ---------------------
 * Feature: Added support for Python 3
