@@ -25,7 +25,7 @@ Installation
 To get started you will simply need to add the package to your "eggs" and
 "zcml" sections, run buildout and restart your Plone instance
 
-.. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout/
+.. _`zc.buildout`: https://pypi.python.org/pypi/zc.buildout/
 
 A sample buildout configuration file, i.e. ``buildout.cfg``, could look like
 this::
@@ -42,8 +42,8 @@ this::
 Source code
 ===========
 
-Latest source code in EEA svn:
-   http://svn.eionet.europa.eu/repositories/Zope/trunk/eea.faceted.vocabularies
+Latest source code in EEA GitHub:
+   https://github.com/eea/eea.faceted.vocabularies
 
 
 Copyright and license
@@ -71,4 +71,4 @@ Funding
 
 EEA_ - European Enviroment Agency (EU)
 
-.. _EEA: http://www.eea.europa.eu/
+.. _EEA: https://www.eea.europa.eu/

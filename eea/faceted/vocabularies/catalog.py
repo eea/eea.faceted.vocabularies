@@ -1,23 +1,23 @@
 """ Catalog specific vocabularies
 """
-import operator
 from plone.app.querystring.interfaces import IQuerystringRegistryReader
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from zope.component.hooks import getSite
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
-from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import lowercase_text
 from eea.faceted.vocabularies.utils import IVocabularyFactory
+
 #
 # Object provides
 #
+@implementer(IVocabularyFactory)
 class ObjectProvidesVocabulary(object):
     """Vocabulary factory for object provides index.
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
@@ -37,10 +37,10 @@ class ObjectProvidesVocabulary(object):
 #
 # Catalog indexes
 #
+@implementer(IVocabularyFactory)
 class CatalogIndexesVocabulary(object):
     """ Return catalog indexes as vocabulary
     """
-    implements(IVocabularyFactory)
 
     def _labels(self):
         """ Get indexes labels from portal_atct settings
@@ -59,7 +59,7 @@ class CatalogIndexesVocabulary(object):
         """
         labels = self._labels()
         res = [(term, labels.get(term, '') or term) for term in indexes]
-        res.sort(key=operator.itemgetter(1), cmp=compare)
+        res.sort(key=lowercase_text)
         res.insert(0, ('', ''))
         items = [SimpleTerm(key, key, value) for key, value in res]
         return SimpleVocabulary(items)
@@ -71,13 +71,14 @@ class CatalogIndexesVocabulary(object):
         indexes = ctool.Indexes.keys()
         return self._create_vocabulary(indexes)
 
+
 #
 # Rangeable catalog indexes
 #
+@implementer(IVocabularyFactory)
 class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for alphabetic widget
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
@@ -95,10 +96,10 @@ class RangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 #
 # Alphabetic catalog indexes
 #
+@implementer(IVocabularyFactory)
 class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for alphabetic widget
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
@@ -122,10 +123,10 @@ class AlphabeticCatalogIndexesVocabulary(CatalogIndexesVocabulary):
 #
 # Date range catalog indexes
 #
+@implementer(IVocabularyFactory)
 class DateRangeCatalogIndexesVocabulary(CatalogIndexesVocabulary):
     """ Filter catalog indexes for daterange widget
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface

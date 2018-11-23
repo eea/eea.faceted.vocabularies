@@ -1,6 +1,13 @@
 Changelog
 =========
 
+6.7 - (2018-11-19)
+---------------------
+* Feature: Added support for Python 3
+  [pbauer refs #10]
+* Change: updated URLs pointing to eea.europa.eu with https://
+  [alecghica refs #95849]
+
 6.6 - (2018-05-15)
 ------------------
 * Fix double empty entry of first term in vocabulary
@@ -160,4 +167,3 @@ Changelog
 1.0 (2009-10-29)
 ----------------
 * Initial release
-

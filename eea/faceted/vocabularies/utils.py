@@ -1,20 +1,11 @@
 """ Utils
 """
-try:
-    # Don't blame me, blame #pyflakes
-    from zope.schema import interfaces
-    IVocabularyFactory = interfaces.IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema import vocabulary
-    IVocabularyFactory = vocabulary.IVocabularyFactory
+from Products.CMFPlone.utils import safe_unicode
+from zope.schema import interfaces
+IVocabularyFactory = interfaces.IVocabularyFactory
+
 #
-# Util sort method
+# Util for sort method
 #
-def compare(a, b):
-    """ Compare lower values """
-    if not isinstance(a, unicode):
-        a = a.decode('utf-8')
-    if not isinstance(b, unicode):
-        b = b.decode('utf-8')
-    return cmp(a.lower(), b.lower())
+def lowercase_text(values):
+    return safe_unicode(values[1]).lower()

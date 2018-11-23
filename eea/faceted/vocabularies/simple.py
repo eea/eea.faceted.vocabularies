@@ -2,7 +2,7 @@
 """
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 from eea.faceted.vocabularies import EEAMessageFactory as _
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 
@@ -10,10 +10,10 @@ from zope.schema.vocabulary import SimpleTerm
 #
 # Use catalog
 #
+@implementer(IVocabularyFactory)
 class UseCatalogVocabulary(object):
     """ Use catalog vocabulary
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         """ See IVocabularyFactory interface
@@ -28,10 +28,10 @@ class UseCatalogVocabulary(object):
 #
 # JsTree themes
 #
+@implementer(IVocabularyFactory)
 class JsTreeThemes(object):
     """ Widget position in page
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
 

@@ -2,15 +2,15 @@
 """
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 from eea.faceted.vocabularies import EEAMessageFactory as _
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 
 
+@implementer(IVocabularyFactory)
 class WidgetSections(object):
     """ Widget position in page
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
 

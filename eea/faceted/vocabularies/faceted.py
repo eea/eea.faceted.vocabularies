@@ -1,22 +1,21 @@
 """ Faceted vocabularies
 """
-import operator
-from zope.interface import implements
+from zope.interface import implementer
 from zope.component.hooks import getSite
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
-from eea.faceted.vocabularies.utils import compare
+from eea.faceted.vocabularies.utils import lowercase_text
 from eea.faceted.vocabularies.utils import IVocabularyFactory
 
 
 #
 # Intersect portal_types with portal_faceted types
 #
+@implementer(IVocabularyFactory)
 class FacetedPortalTypesVocabulary(object):
     """Vocabulary factory for faceted portal types.
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         site = getSite()
@@ -36,7 +35,7 @@ class FacetedPortalTypesVocabulary(object):
             items.update(faceted_items)
 
         items = items.items()
-        items.sort(key=operator.itemgetter(1), cmp=compare)
+        items = sorted(items, key=lowercase_text)
 
         items = [SimpleTerm(i[0], i[0], i[1]) for i in items]
         return SimpleVocabulary(items)
@@ -45,10 +44,10 @@ class FacetedPortalTypesVocabulary(object):
 #
 # Get only portal_faceted types
 #
+@implementer(IVocabularyFactory)
 class FacetedOnlyPortalTypesVocabulary(object):
     """Vocabulary factory only for faceted portal types.
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, *args, **kwargs):
         ftool = getToolByName(getSite(), 'portal_faceted', None)
@@ -60,7 +59,7 @@ class FacetedOnlyPortalTypesVocabulary(object):
                      for t in ftool.objectValues())
 
         items = items.items()
-        items.sort(key=operator.itemgetter(1), cmp=compare)
+        items.sort(key=lowercase_text)
 
         items = [SimpleTerm(i[0], i[0], i[1]) for i in items]
         return SimpleVocabulary(items)
