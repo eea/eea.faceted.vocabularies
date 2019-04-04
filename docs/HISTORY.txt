@@ -3,6 +3,8 @@ Changelog
 
 6.9-dev0 - (unreleased)
 ---------------------
+* Change: Update i18n [ro]
+  [avoinea]
 
 6.8 - (2019-01-28)
 ---------------------
