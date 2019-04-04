@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-04-04 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,23 +16,23 @@ msgstr ""
 
 #: ../../vocabularies/simple.py:41
 msgid "Apple"
-msgstr "Măr"
+msgstr "Apple"
 
 #: ../../vocabularies/section.py:18
 msgid "Basic search"
-msgstr "De bază de căutare"
+msgstr "Căutare de bază"
+
+#: ../../vocabularies/position.py:24
+msgid "Bottom"
+msgstr "Jos"
 
 #: ../../vocabularies/position.py:23
-msgid "Bottom"
-msgstr "Partea de jos a ecranului"
-
-#: ../../vocabularies/position.py:22
 msgid "Center bottom"
-msgstr "Centrul de jos"
+msgstr "Centru jos"
 
-#: ../../vocabularies/position.py:20
+#: ../../vocabularies/position.py:21
 msgid "Center top"
-msgstr "Centrul de top"
+msgstr "Centru sus"
 
 #: ../../vocabularies/simple.py:40
 msgid "Classic"
@@ -44,29 +44,28 @@ msgstr "Implicit"
 
 #: ../../vocabularies/section.py:19
 msgid "Extended search"
-msgstr "Extinsă de căutare"
+msgstr "Căutare extinsă"
 
 #: ../../vocabularies/simple.py:42
 msgid "Green"
 msgstr "Verde"
 
-#: ../../vocabularies/position.py:19
+#: ../../vocabularies/position.py:20
 msgid "Left"
-msgstr "La stânga"
+msgstr "Stânga"
 
 #: ../../vocabularies/simple.py:22
 msgid "No"
 msgstr "Nu"
 
-#: ../../vocabularies/position.py:21
+#: ../../vocabularies/position.py:22
 msgid "Right"
 msgstr "Dreapta"
 
-#: ../../vocabularies/position.py:18
+#: ../../vocabularies/position.py:19
 msgid "Top"
-msgstr "Parte de sus a ecranului"
+msgstr "Sus"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
 msgstr "Da"
-

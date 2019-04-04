@@ -1,10 +1,10 @@
 # Translation of eea.pot to Italian
 # Giacomo Spettoli <giacomo.spettoli@gmail.com>, 2012.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.faceted.vocabularies\n"
-"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-04-04 17:48+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -26,15 +26,15 @@ msgstr "Mela"
 msgid "Basic search"
 msgstr "Ricerca base"
 
-#: ../../vocabularies/position.py:23
+#: ../../vocabularies/position.py:24
 msgid "Bottom"
 msgstr "Parte inferiore"
 
-#: ../../vocabularies/position.py:22
+#: ../../vocabularies/position.py:23
 msgid "Center bottom"
 msgstr "Parte centrale inferiore"
 
-#: ../../vocabularies/position.py:20
+#: ../../vocabularies/position.py:21
 msgid "Center top"
 msgstr "Parte centrale superiore"
 
@@ -54,7 +54,7 @@ msgstr "Ricerca avanzata"
 msgid "Green"
 msgstr "Verde"
 
-#: ../../vocabularies/position.py:19
+#: ../../vocabularies/position.py:20
 msgid "Left"
 msgstr "Sinistra"
 
@@ -62,15 +62,14 @@ msgstr "Sinistra"
 msgid "No"
 msgstr "No"
 
-#: ../../vocabularies/position.py:21
+#: ../../vocabularies/position.py:22
 msgid "Right"
 msgstr "Destra"
 
-#: ../../vocabularies/position.py:18
+#: ../../vocabularies/position.py:19
 msgid "Top"
 msgstr "Parte superiore"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
 msgstr "Sì"
-
