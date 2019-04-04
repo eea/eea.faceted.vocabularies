@@ -1,7 +1,7 @@
 Changelog
 =========
 
-6.9-dev0 - (unreleased)
+6.9 - (2019-04-04)
 ---------------------
 * Change: Update i18n [ro]
   [avoinea]
