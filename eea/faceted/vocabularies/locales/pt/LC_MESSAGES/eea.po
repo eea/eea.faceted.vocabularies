@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-04-04 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,15 +22,15 @@ msgstr "Maca."
 msgid "Basic search"
 msgstr "Pesquisa Básica"
 
-#: ../../vocabularies/position.py:23
+#: ../../vocabularies/position.py:24
 msgid "Bottom"
 msgstr "Inferior"
 
-#: ../../vocabularies/position.py:22
+#: ../../vocabularies/position.py:23
 msgid "Center bottom"
 msgstr "Centro de fundo"
 
-#: ../../vocabularies/position.py:20
+#: ../../vocabularies/position.py:21
 msgid "Center top"
 msgstr "Centro de topo"
 
@@ -50,7 +50,7 @@ msgstr "Busca avançada"
 msgid "Green"
 msgstr "Verde   "
 
-#: ../../vocabularies/position.py:19
+#: ../../vocabularies/position.py:20
 msgid "Left"
 msgstr "ESQUERDA"
 
@@ -58,15 +58,14 @@ msgstr "ESQUERDA"
 msgid "No"
 msgstr "Não"
 
-#: ../../vocabularies/position.py:21
+#: ../../vocabularies/position.py:22
 msgid "Right"
 msgstr "Direito"
 
-#: ../../vocabularies/position.py:18
+#: ../../vocabularies/position.py:19
 msgid "Top"
 msgstr "Início"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
 msgstr "Sim"
-

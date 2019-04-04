@@ -5,20 +5,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.faceted.vocabularies\n"
-"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-04-04 17:48+0000\n"
 "PO-Revision-Date: 2013-06-04 15:18-0430\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
+"Language: es\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 
 #: ../../vocabularies/simple.py:41
@@ -29,15 +29,15 @@ msgstr "Manzana"
 msgid "Basic search"
 msgstr "Búsqueda básica"
 
-#: ../../vocabularies/position.py:23
+#: ../../vocabularies/position.py:24
 msgid "Bottom"
 msgstr "Inferior"
 
-#: ../../vocabularies/position.py:22
+#: ../../vocabularies/position.py:23
 msgid "Center bottom"
 msgstr "Parte inferior central"
 
-#: ../../vocabularies/position.py:20
+#: ../../vocabularies/position.py:21
 msgid "Center top"
 msgstr "Centro de la parte superior"
 
@@ -57,7 +57,7 @@ msgstr "Búsqueda avanzada"
 msgid "Green"
 msgstr "Verde"
 
-#: ../../vocabularies/position.py:19
+#: ../../vocabularies/position.py:20
 msgid "Left"
 msgstr "Izquierda"
 
@@ -65,11 +65,11 @@ msgstr "Izquierda"
 msgid "No"
 msgstr "No"
 
-#: ../../vocabularies/position.py:21
+#: ../../vocabularies/position.py:22
 msgid "Right"
 msgstr "Derecho"
 
-#: ../../vocabularies/position.py:18
+#: ../../vocabularies/position.py:19
 msgid "Top"
 msgstr "Superior"
 

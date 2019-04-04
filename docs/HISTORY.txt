@@ -1,6 +1,11 @@
 Changelog
 =========
 
+6.9 - (2019-04-04)
+---------------------
+* Change: Update i18n [ro]
+  [avoinea]
+
 6.8 - (2019-01-28)
 ---------------------
 * Jenkins: Add sonarqube step

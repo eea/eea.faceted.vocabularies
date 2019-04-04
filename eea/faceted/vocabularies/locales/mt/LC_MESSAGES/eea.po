@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-04-04 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,15 +22,15 @@ msgstr "Apple"
 msgid "Basic search"
 msgstr "Bażiku tfittxija"
 
-#: ../../vocabularies/position.py:23
+#: ../../vocabularies/position.py:24
 msgid "Bottom"
 msgstr "Bottom"
 
-#: ../../vocabularies/position.py:22
+#: ../../vocabularies/position.py:23
 msgid "Center bottom"
 msgstr "Qiegħ Center"
 
-#: ../../vocabularies/position.py:20
+#: ../../vocabularies/position.py:21
 msgid "Center top"
 msgstr "Quċċata Center"
 
@@ -50,7 +50,7 @@ msgstr "Estiża tfittxija"
 msgid "Green"
 msgstr "Paper"
 
-#: ../../vocabularies/position.py:19
+#: ../../vocabularies/position.py:20
 msgid "Left"
 msgstr "Xellug"
 
@@ -58,15 +58,14 @@ msgstr "Xellug"
 msgid "No"
 msgstr "Le"
 
-#: ../../vocabularies/position.py:21
+#: ../../vocabularies/position.py:22
 msgid "Right"
 msgstr "Dritt"
 
-#: ../../vocabularies/position.py:18
+#: ../../vocabularies/position.py:19
 msgid "Top"
 msgstr "Top"
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
 msgstr "Iva"
-

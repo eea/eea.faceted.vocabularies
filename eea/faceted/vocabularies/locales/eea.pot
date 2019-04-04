@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-26 12:47+0000\n"
+"POT-Creation-Date: 2019-04-04 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,15 +25,15 @@ msgstr ""
 msgid "Basic search"
 msgstr ""
 
-#: ../../vocabularies/position.py:23
+#: ../../vocabularies/position.py:24
 msgid "Bottom"
 msgstr ""
 
-#: ../../vocabularies/position.py:22
+#: ../../vocabularies/position.py:23
 msgid "Center bottom"
 msgstr ""
 
-#: ../../vocabularies/position.py:20
+#: ../../vocabularies/position.py:21
 msgid "Center top"
 msgstr ""
 
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Green"
 msgstr ""
 
-#: ../../vocabularies/position.py:19
+#: ../../vocabularies/position.py:20
 msgid "Left"
 msgstr ""
 
@@ -61,15 +61,14 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: ../../vocabularies/position.py:21
+#: ../../vocabularies/position.py:22
 msgid "Right"
 msgstr ""
 
-#: ../../vocabularies/position.py:18
+#: ../../vocabularies/position.py:19
 msgid "Top"
 msgstr ""
 
 #: ../../vocabularies/simple.py:23
 msgid "Yes"
 msgstr ""
-
