@@ -2,20 +2,20 @@ Changelog
 =========
 
 7.0-dev0 - (unreleased)
----------------------
+--------------------------
 
 6.9 - (2019-04-04)
----------------------
+--------------------------
 * Change: Update i18n [ro]
   [avoinea]
 
 6.8 - (2019-01-28)
----------------------
+--------------------------
 * Jenkins: Add sonarqube step
   [avoinea refs #101552]
 
 6.7 - (2018-11-19)
----------------------
+--------------------------
 * Feature: Added support for Python 3
   [pbauer refs #10]
 * Change: updated URLs pointing to eea.europa.eu with https://
